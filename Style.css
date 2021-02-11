@@ -1,0 +1,163 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #1A3349;
+}
+
+header{
+    height: 70px;
+}
+header img{
+    height: 60px;
+    float: left;
+}
+header img a {
+    transition: .3s;
+}
+header h1{
+    float: left;
+    padding: 15px 5px;
+    text-transform: uppercase;
+}
+header h1 a {
+    transition: .3s;
+}
+header h1 a:hover{
+    color: #00B99E;
+}
+header ul{
+    float: right;
+}
+header ul li{
+    padding: 24px;
+    display: inline-block;
+}
+header ul li a{
+    transition: .3s;
+}
+header ul li a:hover{
+    color: #00B99E;
+}
+a{
+    text-decoration: none;
+}
+.container {
+    width: 90%;
+    margin:0 auto;
+}
+.container::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.mobile-menu{
+    float: right;
+    display: none;
+    padding: 19px;
+}
+.mobile-menu:hover{
+    color: #00B99E;
+}
+#check {
+    display: none;
+}
+.sidebar{
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: -300px;
+    width: 300px;
+    background-color: rgba(0, 185, 158, 0.9);
+    transition: .4s;
+}
+.sidebar ul li a {
+    color: lightyellow;
+}
+.sidebar ul li{
+    padding: 24px;
+    transition: .3s;
+    transition-property: background-color;
+}
+.sidebar ul li:hover{
+    background-color: rosybrown;
+}
+#check:checked ~ .sidebar{
+    left: 0px;
+}
+.banner{
+    background-color: #00B99E;
+    padding: 100px 0;
+}
+section{
+    padding: 50px 0;
+}
+.banner img{
+    width: 400px;
+    float: right;
+}
+.banner h2{
+    font-size: 60px;
+    bottom: 50px;
+    align-items: center;
+    color: seashell;
+}
+
+.banner span{
+    color: #1A3349;
+}
+.banner h2{
+    margin-top: 10px;
+}
+.banner p{
+    font-size: 30px;
+    bottom: 50px;
+    align-items: center;
+    color: seashell;
+}
+.banner-left{
+    padding-left: 24px;
+}
+section h3{
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 20px;
+    position: relative;
+}
+section h3::before{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    width: 120px;
+    height: 1px;
+    background-color: #dddddd;
+    left: calc(50% - 60px);
+}
+section h3::after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    width: 40px;
+    height: 4px;
+    background-color: #f84744;
+    left: calc(50% - 20px);
+}
+#about p {
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 25px;
+    margin-bottom: 15px;
+}
+#skills {
+    background-color: #f9f9f9;
+}
+@media (max-width: 768px){
+    .mobile-menu{
+        display: block;
+    }
+    header ul {
+        display: none;
+    }
+}
